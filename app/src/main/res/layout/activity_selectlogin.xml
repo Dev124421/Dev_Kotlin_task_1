@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Selectlogin"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="414.6sp"
+        android:layout_height="233.1sp"
+        android:src="@drawable/background_3"/>
+
+    <ImageView
+        android:layout_width="414sp"
+        android:layout_height="303.06sp"
+        android:src="@drawable/background_4"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="10sp"
+        android:layout_height="18sp"
+        android:src="@drawable/backarrow"
+        android:clickable="true"
+        android:layout_marginLeft="24.62sp"
+        android:layout_marginTop="56.83sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <ImageView
+        android:layout_width="224.69sp"
+        android:layout_height="170.69sp"
+        android:src="@drawable/location"
+        android:layout_marginLeft="94.66sp"
+        android:layout_marginTop="119.8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        android:layout_width="246sp"
+        android:layout_height="29sp"
+        android:text="Select Your Location"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:layout_marginTop="330.65sp"
+        android:layout_marginLeft="83.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="324sp"
+        android:layout_height="57sp"
+        android:text="Switch on your location to stay in tune with \n           what's happening in your area "
+        android:textSize="16sp"
+        android:layout_marginTop="374.65sp"
+        android:layout_marginLeft="44.19sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/grey"/>
+
+    <TextView
+        android:layout_width="73sp"
+        android:layout_height="29sp"
+        android:text="Your Zone"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:layout_marginTop="521sp"
+        android:layout_marginLeft="25.18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="79sp"
+            android:layout_height="29sp"
+            android:text="Banasree"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="560sp"
+            android:layout_marginLeft="28.56sp"/>
+        
+        <ImageView
+            android:layout_width="7sp"
+            android:layout_height="13sp"
+            android:src="@drawable/rename_arrow"
+            android:layout_marginTop="571sp"
+            android:layout_marginLeft="272.12sp"/>
+
+        <ImageView
+            android:layout_width="364sp"
+            android:layout_height="0sp"
+            android:src="@drawable/outline"
+            android:layout_marginTop="599.55sp"
+            android:layout_marginLeft="-360sp"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="72sp"
+        android:layout_height="29sp"
+        android:text="Your Area"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:layout_marginTop="625.55sp"
+        android:layout_marginLeft="24.88sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="152sp"
+            android:layout_height="29sp"
+            android:text="Types of your area"
+            android:textStyle="bold"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:layout_marginTop="668.55sp"
+            android:layout_marginLeft="28.56sp" />
+
+        <ImageView
+            android:layout_width="7sp"
+            android:layout_height="13sp"
+            android:src="@drawable/rename_arrow"
+            android:layout_marginTop="679.55sp"
+            android:layout_marginLeft="195.44sp"/>
+
+        <ImageView
+            android:layout_width="364sp"
+            android:layout_height="0sp"
+            android:src="@drawable/outline"
+            android:layout_marginTop="708.1sp"
+            android:layout_marginLeft="-360sp"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="364sp"
+        android:layout_height="67sp"
+        android:background="@drawable/button_layout"
+        android:text="Submit"
+        android:layout_marginLeft="25.3sp"
+        android:layout_marginTop="748.45sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

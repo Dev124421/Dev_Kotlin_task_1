@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#53B175</color>
+    <color name="grey">#7C7C7C</color>
+    <color name="google_blue">#4285F4</color>
+    <color name="facebook_blue">#4267B2</color>
+    <color name="outline">#E2E2E2</color>
+    <color name="light_grey">#B1B1B1</color>
+    <color name="dark_grey">#4C4F4D</color>
+    <color name="search">#F2F2F2</color>
+    <color name="light_orange">#0082C8</color>
+</resources>

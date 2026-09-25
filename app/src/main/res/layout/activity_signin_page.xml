@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signin_page"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/topimage"
+        android:layout_width="0dp"
+        android:layout_height="374dp"
+        android:src="@drawable/background_2"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Get your groceries\nwith nectar"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topimage" />
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="33.97dp"
+            android:layout_height="23.7dp"
+            android:src="@drawable/bangladesh_flag"
+            android:layout_marginTop="478.09dp"
+            android:layout_marginLeft="25.07dp"/>
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="29dp"
+            android:text="+880"
+            android:layout_marginTop="477.24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="12.02dp"/>
+
+        <ImageView
+            android:layout_width="364dp"
+            android:layout_height="0dp"
+            android:src="@drawable/outline"
+            android:layout_marginTop="516.79dp"
+            android:layout_marginLeft="-89.99dp"
+            android:background="@color/outline"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/socialtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Or connect with social media"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/Layout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/googlebutton"
+        android:layout_width="364dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="25dp"
+        android:text="G     Continue with Google"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:background="@drawable/button_layout"
+        app:layout_constraintTop_toBottomOf="@id/socialtext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/facebookbutton"
+        android:layout_width="364dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:text="Continue with Facebook"
+        android:background="@drawable/button_layout"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/googlebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

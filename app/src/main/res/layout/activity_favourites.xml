@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".My_Cart">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favourites"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="55.82dp"
+        android:layout_marginLeft="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="30.91dp"
+        android:layout_height="54.9dp"
+        android:src="@drawable/sprite"
+        android:layout_marginLeft="32.62dp"
+        android:layout_marginTop="136.05dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <LinearLayout
+        android:layout_width="283dp"
+        android:layout_height="41.83dp"
+        android:orientation="vertical"
+        android:layout_marginTop="143.13dp"
+        android:layout_marginLeft="105.57dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sprite Can"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="325ml, Price"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1.50"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="183.58dp"
+            android:layout_marginTop="-30.97dp"/>
+        
+        <ImageView
+            android:layout_width="8.4dp"
+            android:layout_height="14dp"
+            android:src="@drawable/backarrow"
+            android:rotation="180"
+            android:layout_marginTop="-17.97dp"
+            android:layout_marginLeft="250dp"/>
+
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="26.07dp"
+        android:layout_height="52.37dp"
+        android:src="@drawable/Diet_coke"
+        android:layout_marginTop="252.6dp"
+        android:layout_marginLeft="35.04dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="283dp"
+        android:layout_height="41.83dp"
+        android:orientation="vertical"
+        android:layout_marginTop="258.08dp"
+        android:layout_marginLeft="105.57dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diet Coke"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="355ml, Price"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1.99"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="183.58dp"
+            android:layout_marginTop="-30.97dp"/>
+
+        <ImageView
+            android:layout_width="8.4dp"
+            android:layout_height="14dp"
+            android:src="@drawable/backarrow"
+            android:rotation="180"
+            android:layout_marginTop="-17.97dp"
+            android:layout_marginLeft="250dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="55.69dp"
+        android:layout_height="55.69dp"
+        android:src="@drawable/juice"
+        android:layout_marginLeft="20.23dp"
+        android:layout_marginTop="365.51dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="283dp"
+        android:layout_height="41.83dp"
+        android:orientation="vertical"
+        android:layout_marginTop="371.6dp"
+        android:layout_marginLeft="105.57dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple & Grape Juice"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2L, Price"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$15.50"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="183.58dp"
+            android:layout_marginTop="-30.97dp"/>
+
+        <ImageView
+            android:layout_width="8.4dp"
+            android:layout_height="14dp"
+            android:src="@drawable/backarrow"
+            android:rotation="180"
+            android:layout_marginTop="-17.97dp"
+            android:layout_marginLeft="250dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="28.82dp"
+        android:layout_height="53.4dp"
+        android:src="@drawable/Coca_cola"
+        android:layout_marginTop="481.26dp"
+        android:layout_marginLeft="33.66dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="283dp"
+        android:layout_height="41.83dp"
+        android:orientation="vertical"
+        android:layout_marginTop="487.6dp"
+        android:layout_marginLeft="105.57dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coca Cola Can"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="325ml, Price"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$4.99"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="183.58dp"
+            android:layout_marginTop="-30.97dp"/>
+
+        <ImageView
+            android:layout_width="8.4dp"
+            android:layout_height="14dp"
+            android:src="@drawable/backarrow"
+            android:rotation="180"
+            android:layout_marginTop="-17.97dp"
+            android:layout_marginLeft="250dp"/>
+
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="30.43dp"
+        android:layout_height="58.13dp"
+        android:src="@drawable/pepsi"
+        android:layout_marginLeft="33.1dp"
+        android:layout_marginTop="583.89dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <LinearLayout
+        android:layout_width="283dp"
+        android:layout_height="41.83dp"
+        android:orientation="vertical"
+        android:layout_marginTop="592.6dp"
+        android:layout_marginLeft="105.57dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pepsi Can"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="330ml, Price"
+            android:textStyle="bold"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$4.99"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="183.58dp"
+            android:layout_marginTop="-30.97dp"/>
+
+        <ImageView
+            android:layout_width="8.4dp"
+            android:layout_height="14dp"
+            android:src="@drawable/backarrow"
+            android:rotation="180"
+            android:layout_marginTop="-17.97dp"
+            android:layout_marginLeft="250dp"/>
+
+    </LinearLayout>
+    
+    <Button
+        android:layout_width="364dp"
+        android:layout_height="67dp"
+        android:text="Add All To Cart"
+        android:clickable="true"
+        android:background="@drawable/button_layout"
+        android:layout_marginTop="712.38dp"
+        android:layout_marginLeft="24.89dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
