@@ -1,162 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Selectlogin"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".Selectlogin">
 
     <ImageView
-        android:layout_width="414.6sp"
-        android:layout_height="233.1sp"
-        android:src="@drawable/background_3"/>
+        android:id="@+id/bgTop"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_3"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:layout_width="414sp"
-        android:layout_height="303.06sp"
-        android:src="@drawable/background_4"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <ImageView
-        android:layout_width="10sp"
-        android:layout_height="18sp"
-        android:src="@drawable/backarrow"
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
-        android:layout_marginLeft="24.62sp"
-        android:layout_marginTop="56.83sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    
+        android:focusable="true"
+        android:padding="14dp"
+        android:src="@drawable/backarrow"
+        android:contentDescription="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:layout_width="224.69sp"
-        android:layout_height="170.69sp"
+        android:id="@+id/ivLocationIllustration"
+        android:layout_width="220dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/location"
-        android:layout_marginLeft="94.66sp"
-        android:layout_marginTop="119.8sp"
+        android:contentDescription="Location Illustration"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
-        android:layout_width="246sp"
-        android:layout_height="29sp"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:text="Select Your Location"
-        android:textStyle="bold"
+        android:textColor="#181725"
         android:textSize="26sp"
-        android:layout_marginTop="330.65sp"
-        android:layout_marginLeft="83.5sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ivLocationIllustration"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:layout_width="324sp"
-        android:layout_height="57sp"
-        android:text="Switch on your location to stay in tune with \n           what's happening in your area "
-        android:textSize="16sp"
-        android:layout_marginTop="374.65sp"
-        android:layout_marginLeft="44.19sp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="Switch on your location to stay in tune with what’s happening in your area"
+        android:textColor="#7C7C7C"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/grey"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:layout_width="73sp"
-        android:layout_height="29sp"
+        android:id="@+id/tvZoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:text="Your Zone"
-        android:textStyle="bold"
-        android:textColor="@color/grey"
-        android:layout_marginTop="521sp"
-        android:layout_marginLeft="25.18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textColor="#7C7C7C"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/rowZone"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvZoneLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:layout_width="79sp"
-            android:layout_height="29sp"
+            android:id="@+id/tvZoneValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Banasree"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="560sp"
-            android:layout_marginLeft="28.56sp"/>
-        
+            android:textColor="#181725"
+            android:textSize="18sp" />
+
         <ImageView
-            android:layout_width="7sp"
-            android:layout_height="13sp"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
             android:src="@drawable/rename_arrow"
-            android:layout_marginTop="571sp"
-            android:layout_marginLeft="272.12sp"/>
-
-        <ImageView
-            android:layout_width="364sp"
-            android:layout_height="0sp"
-            android:src="@drawable/outline"
-            android:layout_marginTop="599.55sp"
-            android:layout_marginLeft="-360sp"
-            android:background="@color/black"/>
-
+            android:contentDescription="Select Zone" />
     </LinearLayout>
+
+    <View
+        android:id="@+id/dividerZone"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#E2E2E2"
+        app:layout_constraintTop_toBottomOf="@id/rowZone"
+        app:layout_constraintStart_toStartOf="@id/rowZone"
+        app:layout_constraintEnd_toEndOf="@id/rowZone" />
 
     <TextView
-        android:layout_width="72sp"
-        android:layout_height="29sp"
+        android:id="@+id/tvAreaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:text="Your Area"
-        android:textStyle="bold"
+        android:textColor="#7C7C7C"
         android:textSize="16sp"
-        android:textColor="@color/grey"
-        android:layout_marginTop="625.55sp"
-        android:layout_marginLeft="24.88sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toBottomOf="@id/dividerZone"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/rowArea"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvAreaLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:layout_width="152sp"
-            android:layout_height="29sp"
+            android:id="@+id/tvAreaValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Types of your area"
-            android:textStyle="bold"
-            android:textColor="@color/light_grey"
-            android:textSize="18sp"
-            android:layout_marginTop="668.55sp"
-            android:layout_marginLeft="28.56sp" />
+            android:textColor="#B1B1B1"
+            android:textSize="18sp" />
 
         <ImageView
-            android:layout_width="7sp"
-            android:layout_height="13sp"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
             android:src="@drawable/rename_arrow"
-            android:layout_marginTop="679.55sp"
-            android:layout_marginLeft="195.44sp"/>
-
-        <ImageView
-            android:layout_width="364sp"
-            android:layout_height="0sp"
-            android:src="@drawable/outline"
-            android:layout_marginTop="708.1sp"
-            android:layout_marginLeft="-360sp"
-            android:background="@color/black"/>
-
+            android:contentDescription="Select Area" />
     </LinearLayout>
+
+    <View
+        android:id="@+id/dividerArea"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#E2E2E2"
+        app:layout_constraintTop_toBottomOf="@id/rowArea"
+        app:layout_constraintStart_toStartOf="@id/rowArea"
+        app:layout_constraintEnd_toEndOf="@id/rowArea" />
 
     <Button
-        android:layout_width="364sp"
-        android:layout_height="67sp"
-        android:background="@drawable/button_layout"
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/green"
         android:text="Submit"
-        android:layout_marginLeft="25.3sp"
-        android:layout_marginTop="748.45sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,98 +6,117 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signin_page"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".signin_page">
 
     <ImageView
         android:id="@+id/topimage"
         android:layout_width="0dp"
-        android:layout_height="374dp"
-        android:src="@drawable/background_2"
+        android:layout_height="330dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/background_2"
+        android:contentDescription="@null"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="423.63dp"
+        android:layout_marginEnd="24dp"
         android:text="Get your groceries\nwith nectar"
-        android:textColor="@color/black"
+        android:textColor="#181725"
         android:textSize="26sp"
         android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topimage" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
-        android:id="@+id/Layout2"
-        android:layout_width="match_parent"
+        android:id="@+id/phoneInputContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="517.24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:layout_width="33.97dp"
-            android:layout_height="23.7dp"
+            android:id="@+id/ivFlag"
+            android:layout_width="32dp"
+            android:layout_height="22dp"
+            android:scaleType="fitXY"
             android:src="@drawable/bangladesh_flag"
-            android:layout_marginTop="478.09dp"
-            android:layout_marginLeft="25.07dp"/>
+            android:contentDescription="Country Code" />
 
         <TextView
-            android:layout_width="42dp"
-            android:layout_height="29dp"
+            android:id="@+id/tvCountryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:text="+880"
-            android:layout_marginTop="477.24dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="12.02dp"/>
-
-        <ImageView
-            android:layout_width="364dp"
-            android:layout_height="0dp"
-            android:src="@drawable/outline"
-            android:layout_marginTop="516.79dp"
-            android:layout_marginLeft="-89.99dp"
-            android:background="@color/outline"/>
+            android:textColor="#181725"
+            android:textSize="18sp"
+            android:textStyle="normal" />
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/inputDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#E2E2E2"
+        app:layout_constraintTop_toBottomOf="@id/phoneInputContainer"
+        app:layout_constraintStart_toStartOf="@id/phoneInputContainer"
+        app:layout_constraintEnd_toEndOf="@id/phoneInputContainer" />
 
     <TextView
         android:id="@+id/socialtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="596.79dp"
         android:text="Or connect with social media"
+        android:textColor="#828282"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/Layout2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
     <Button
         android:id="@+id/googlebutton"
         android:layout_width="364dp"
         android:layout_height="67dp"
-        android:layout_marginTop="25dp"
-        android:text="G     Continue with Google"
-        android:clickable="true"
-        android:textSize="14sp"
-        android:background="@drawable/button_layout"
-        app:layout_constraintTop_toBottomOf="@id/socialtext"
+        android:text="Continue with Google"
+        android:layout_marginTop="651.58dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:backgroundTint="@color/google_blue"/>
 
     <Button
         android:id="@+id/facebookbutton"
         android:layout_width="364dp"
         android:layout_height="67dp"
-        android:layout_marginTop="12dp"
-        android:clickable="true"
         android:text="Continue with Facebook"
-        android:background="@drawable/button_layout"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/googlebutton"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="738.58dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/facebook_blue"
+        android:clickable="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,13 @@
     <color name="dark_grey">#4C4F4D</color>
     <color name="search">#F2F2F2</color>
     <color name="light_orange">#0082C8</color>
+    <color name="light_green">#53B175</color>
+    <color name="light_yellow">#F8A44C</color>
+    <color name="light_red">#F7A593</color>
+    <color name="light_purple">#D3B0E0</color>
+    <color name="light_yellow2">#FDE598</color>
+    <color name="light_blue">#B7DFF5</color>
+    <color name="nav_inactive">#181725</color>
+    <color name="blue">#1A90F1</color>
+    <color name="yellow">#F8A44C</color>
 </resources>

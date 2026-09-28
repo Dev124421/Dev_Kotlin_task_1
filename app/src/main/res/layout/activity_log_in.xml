@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".log_in"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".log_in">
 
     <ImageView
         android:layout_width="414.6sp"
         android:layout_height="233.1sp"
-        android:src="@drawable/background_3"/>
+        android:src="@drawable/background_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ImageView
         android:layout_width="414sp"
         android:layout_height="303.06sp"
         android:src="@drawable/background_4"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ImageView
+        android:id="@+id/btnBack"
         android:layout_width="10sp"
         android:layout_height="18sp"
         android:src="@drawable/backarrow"
@@ -37,10 +42,10 @@
         android:layout_marginLeft="183.08sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
-    
+
     <TextView
         android:id="@+id/Login"
-        android:layout_width="82sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Loging"
         android:textSize="26sp"
@@ -53,7 +58,7 @@
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="233sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter your email and password"
         android:textSize="16sp"
@@ -65,7 +70,7 @@
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="233sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
         android:textSize="16sp"
@@ -78,8 +83,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="185sp"
@@ -91,17 +96,17 @@
 
         <ImageView
             android:layout_width="364sp"
-            android:layout_height="0sp"
+            android:layout_height="1dp"
             android:src="@drawable/outline"
             android:layout_marginTop="410.65sp"
-            android:layout_marginLeft="-190sp"
+            android:layout_marginLeft="-185sp"
             android:background="@color/black"/>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/text3"
-        android:layout_width="233sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
         android:textSize="16sp"
@@ -114,8 +119,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:layout_width="185sp"
             android:layout_height="29sp"
@@ -126,23 +132,23 @@
 
         <ImageView
             android:layout_width="364sp"
-            android:layout_height="0sp"
+            android:layout_height="1dp"
             android:src="@drawable/outline"
             android:layout_marginTop="519.2sp"
-            android:layout_marginLeft="-190sp"
+            android:layout_marginLeft="-185sp"
             android:background="@color/black"/>
-        
+
         <ImageView
             android:layout_width="19.93sp"
             android:layout_height="18.92sp"
             android:src="@drawable/eyebtn"
             android:layout_marginTop="484.69sp"
-            android:layout_marginRight="24.83sp"/>
+            android:layout_marginLeft="-35sp"/>
 
     </LinearLayout>
-    
+
     <TextView
-        android:layout_width="125.49sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
         android:layout_marginTop="539.2sp"
@@ -151,20 +157,21 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="14sp"
         android:textColor="@color/black"/>
-    
+
     <Button
+        android:id="@+id/loginbtn"
         android:layout_width="364sp"
         android:layout_height="67sp"
         android:clickable="true"
         android:text="Log In"
-        android:background="@drawable/button_layout"
+        android:backgroundTint="@color/green"
         android:layout_marginTop="583.2sp"
         android:layout_marginLeft="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:layout_width="228.01sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don’t have an account? Singup"
         android:textColor="@color/black"

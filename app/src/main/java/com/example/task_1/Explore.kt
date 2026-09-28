@@ -3,18 +3,17 @@ package com.example.task_1
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class My_Cart : AppCompatActivity() {
+class Explore : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_my_cart)
+        setContentView(R.layout.activity_explore)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -22,29 +21,23 @@ class My_Cart : AppCompatActivity() {
             insets
         }
 
-        val checkoutBtn = findViewById<Button>(R.id.checkoutbtn)
-        checkoutBtn.setOnClickListener {
-            val intent = Intent(this@My_Cart, Order_accepted::class.java)
-            startActivity(intent)
-        }
-
         val navShop = findViewById<View>(R.id.navShop)
         navShop.setOnClickListener {
-            val intent = Intent(this@My_Cart, home_screen_2::class.java)
+            val intent = Intent(this@Explore, home_screen_2::class.java)
             startActivity(intent)
             finish()
         }
 
-        val navExplore = findViewById<View>(R.id.navExplore)
-        navExplore.setOnClickListener {
-            val intent = Intent(this@My_Cart, Explore::class.java)
+        val navCart = findViewById<View>(R.id.navCart)
+        navCart.setOnClickListener {
+            val intent = Intent(this@Explore, My_Cart::class.java)
             startActivity(intent)
             finish()
         }
 
         val navFavourite = findViewById<View>(R.id.navFavourite)
         navFavourite.setOnClickListener {
-            val intent = Intent(this@My_Cart, Favourites::class.java)
+            val intent = Intent(this@Explore, Favourites::class.java)
             startActivity(intent)
             finish()
         }
