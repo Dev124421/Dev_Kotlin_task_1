@@ -47,7 +47,7 @@
         android:id="@+id/Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Loging"
+        android:text="Sign Up"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -60,7 +60,7 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your email and password"
+        android:text="Enter your credentials to continue"
         android:textSize="16sp"
         android:layout_marginTop="15sp"
         android:layout_marginLeft="25.01sp"
@@ -72,7 +72,7 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Username"
         android:textSize="16sp"
         android:layout_marginTop="70sp"
         android:layout_marginLeft="25.01sp"
@@ -89,7 +89,7 @@
         <TextView
             android:layout_width="185sp"
             android:layout_height="29sp"
-            android:text="imshuvo97@gmail.com"
+            android:text="Afsar Hossen Shuvo"
             android:textSize="18sp"
             android:layout_marginTop="371.1sp"
             android:layout_marginLeft="28.56sp"/>
@@ -105,12 +105,55 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="16sp"
+        android:layout_marginTop="170sp"
+        android:layout_marginLeft="25.01sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Login"
+        android:textColor="@color/grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="185sp"
+            android:layout_height="29sp"
+            android:text="imshuvo97@gmail.com"
+            android:textSize="18sp"
+            android:layout_marginTop="471.1sp"
+            android:layout_marginLeft="28.56sp"/>
+        
+        <ImageView
+            android:layout_width="19.53dp"
+            android:layout_height="14.65dp"
+            android:src="@drawable/correct"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="467.1dp"/>
+
+        <ImageView
+            android:layout_width="364sp"
+            android:layout_height="1dp"
+            android:src="@drawable/outline"
+            android:layout_marginTop="510.65sp"
+            android:layout_marginLeft="-355sp"
+            android:background="@color/black"/>
+
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
         android:textSize="16sp"
-        android:layout_marginTop="108.55sp"
+    android:layout_marginTop="208.55sp"
         android:layout_marginLeft="25.01sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text2"
@@ -127,14 +170,14 @@
             android:layout_height="29sp"
             android:text=". . . . . . . ."
             android:textSize="18sp"
-            android:layout_marginTop="490.54sp"
+            android:layout_marginTop="590.54sp"
             android:layout_marginLeft="28.56sp"/>
 
         <ImageView
             android:layout_width="364sp"
             android:layout_height="1dp"
             android:src="@drawable/outline"
-            android:layout_marginTop="519.2sp"
+            android:layout_marginTop="619.2sp"
             android:layout_marginLeft="-185sp"
             android:background="@color/black"/>
 
@@ -142,7 +185,7 @@
             android:layout_width="19.93sp"
             android:layout_height="18.92sp"
             android:src="@drawable/eyebtn"
-            android:layout_marginTop="484.69sp"
+            android:layout_marginTop="584.69sp"
             android:layout_marginLeft="-35sp"/>
 
     </LinearLayout>
@@ -151,7 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
-        android:layout_marginTop="539.2sp"
+        android:layout_marginTop="639.2sp"
         android:layout_marginLeft="263.51sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,13 +202,13 @@
         android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/sign_upbtn"
         android:layout_width="364sp"
         android:layout_height="67sp"
         android:clickable="true"
         android:text="Log In"
         android:backgroundTint="@color/green"
-        android:layout_marginTop="650.2sp"
+        android:layout_marginTop="700.2sp"
         android:layout_marginLeft="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -176,7 +219,7 @@
         android:text="Don’t have an account? Singup"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:layout_marginTop="755.2sp"
+        android:layout_marginTop="805.2sp"
         android:layout_marginLeft="93dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

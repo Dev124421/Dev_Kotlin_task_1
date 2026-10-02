@@ -25,7 +25,6 @@ class Number : AppCompatActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            finish()
         }
 
         val nextBtn = findViewById<Button>(R.id.nextbtn)

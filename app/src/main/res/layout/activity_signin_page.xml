@@ -70,6 +70,11 @@
             android:textSize="18sp"
             android:textStyle="normal" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"  />
+
     </LinearLayout>
 
     <View
@@ -101,8 +106,8 @@
         android:layout_height="67dp"
         android:text="Continue with Google"
         android:layout_marginTop="651.58dp"
-        android:layout_marginLeft="25dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:clickable="true"
         android:backgroundTint="@color/google_blue"/>
@@ -112,9 +117,9 @@
         android:layout_width="364dp"
         android:layout_height="67dp"
         android:text="Continue with Facebook"
-        android:layout_marginLeft="25dp"
         android:layout_marginTop="738.58dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="@color/facebook_blue"
         android:clickable="true"/>

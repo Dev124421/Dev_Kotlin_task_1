@@ -99,9 +99,11 @@
                     app:layout_constraintTop_toBottomOf="@id/tvPepperQty">
 
                     <TextView
+                        android:id="@+id/negative"
                         android:layout_width="38dp"
                         android:layout_height="38dp"
                         android:gravity="center"
+                        android:clickable="true"
                         android:text="—"
                         android:textColor="#B3B3B3"
                         android:textSize="14sp" />
