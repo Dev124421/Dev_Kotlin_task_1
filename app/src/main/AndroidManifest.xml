@@ -27,7 +27,11 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".signin_page"
+            android:name=".SignInActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Number"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -76,6 +80,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Explore"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".signup_page"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

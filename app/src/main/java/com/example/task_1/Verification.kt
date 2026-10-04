@@ -2,7 +2,6 @@ package com.example.task_1
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -34,7 +33,7 @@ class Verification : AppCompatActivity() {
             // Placeholder for resend action
         }
 
-        val nextBtn = findViewById<Button>(R.id.nextbtn1)
+        val nextBtn = findViewById<FloatingActionButton>(R.id.btnNext)
         nextBtn.setOnClickListener {
             val intent = Intent(this@Verification, Selectlogin::class.java)
             startActivity(intent)

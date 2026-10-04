@@ -10,12 +10,10 @@
     tools:context=".Number">
 
     <ImageView
-        android:id="@+id/bgTop"
+        android:id="@+id/Top"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:scaleType="fitXY"
         android:src="@drawable/background_3"
-        android:contentDescription="@null"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -26,18 +24,16 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
         android:padding="14dp"
         android:src="@drawable/backarrow"
-        android:contentDescription="Back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
@@ -79,7 +75,6 @@
             android:id="@+id/ivFlag"
             android:layout_width="34dp"
             android:layout_height="24dp"
-            android:scaleType="fitXY"
             android:src="@drawable/bangladesh_flag"
             android:contentDescription="Flag" />
 
@@ -99,7 +94,6 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="12dp"
-        android:background="#E2E2E2"
         app:layout_constraintEnd_toEndOf="@id/phoneDisplayRow"
         app:layout_constraintStart_toStartOf="@id/phoneDisplayRow"
         app:layout_constraintTop_toBottomOf="@id/phoneDisplayRow" />
