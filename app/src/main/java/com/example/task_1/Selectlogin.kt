@@ -3,16 +3,18 @@ package com.example.task_1
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import com.google.android.material.button.MaterialButton
 
 class Selectlogin : AppCompatActivity() {
 
@@ -21,30 +23,28 @@ class Selectlogin : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_selectlogin)
 
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        val btnSubmit = findViewById<MaterialButton>(R.id.btnSubmit)
+        val tvZoneValue = findViewById<TextView>(R.id.tvZoneValue)
+        val tvAreaValue = findViewById<TextView>(R.id.tvAreaValue)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 
-            findViewById<ImageView>(R.id.btnBack).let { btn ->
-                val params = btn.layoutParams as ConstraintLayout.LayoutParams
-                params.topMargin = systemBars.top + 12
-                btn.layoutParams = params
+            btnBack.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = systemBars.top + 16
             }
 
-            findViewById<Button>(R.id.btnSubmit).let { btn ->
-                val params = btn.layoutParams as ConstraintLayout.LayoutParams
-                params.bottomMargin = systemBars.bottom + 24
-                btn.layoutParams = params
+            btnSubmit.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                bottomMargin = systemBars.bottom + 24
             }
 
             insets
         }
 
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
-            finish()
+        btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
-
-        val tvZoneValue = findViewById<TextView>(R.id.tvZoneValue)
-        val tvAreaValue = findViewById<TextView>(R.id.tvAreaValue)
 
         findViewById<View>(R.id.rowZone).setOnClickListener {
             val zones = arrayOf("Banasree", "Gulshan", "Dhanmondi", "Uttara", "Mirpur")
@@ -52,7 +52,7 @@ class Selectlogin : AppCompatActivity() {
                 .setTitle("Select Zone")
                 .setItems(zones) { _, which ->
                     tvZoneValue.text = zones[which]
-                    tvZoneValue.setTextColor(resources.getColor(android.R.color.black, theme))
+                    tvZoneValue.setTextColor(ContextCompat.getColor(this, android.R.color.black))
                 }
                 .show()
         }
@@ -63,14 +63,14 @@ class Selectlogin : AppCompatActivity() {
                 .setTitle("Select Area")
                 .setItems(areas) { _, which ->
                     tvAreaValue.text = areas[which]
-                    tvAreaValue.setTextColor(resources.getColor(android.R.color.black, theme))
+                    tvAreaValue.setTextColor(ContextCompat.getColor(this, android.R.color.black))
                 }
                 .show()
         }
 
-        findViewById<Button>(R.id.btnSubmit).setOnClickListener {
-            val selectedArea = tvAreaValue.text.toString()
-            if (selectedArea == "Types of your area") {
+        btnSubmit.setOnClickListener {
+            val selectedArea = tvAreaValue.text.toString().trim()
+            if (selectedArea.equals("Types of your area", ignoreCase = true)) {
                 Toast.makeText(this, "Please select your area first", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }

@@ -7,24 +7,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fitsSystemWindows="false"
     tools:context=".Verification">
 
+    <!-- Top decorative banner extending behind status bar -->
     <ImageView
         android:id="@+id/bgTop"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="220dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
         android:src="@drawable/background_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Back Button -->
     <ImageView
         android:id="@+id/btnBack"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
+        android:contentDescription="Back"
+        android:focusable="true"
         android:padding="12dp"
         android:src="@drawable/backarrow"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,13 +40,13 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:text="Enter your 4-digit code"
-        android:textColor="@color/black"
+        android:textColor="#181725"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +60,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
         android:text="Code"
-        android:textColor="@color/grey"
+        android:textColor="#7C7C7C"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
@@ -64,53 +72,63 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
+        android:background="@null"
         android:hint="- - - -"
+        android:imeOptions="actionDone"
         android:inputType="number"
-        android:textSize="22sp"
+        android:letterSpacing="0.4"
+        android:maxLength="4"
+        android:textColor="#181725"
+        android:textColorHint="#B1B1B1"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCodeLabel" />
 
+    <!-- Visible Underline Divider -->
     <View
         android:id="@+id/dividerLine"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="#E2E2E2"
+        app:layout_constraintEnd_toEndOf="@id/etCodeInput"
+        app:layout_constraintStart_toStartOf="@id/etCodeInput"
         app:layout_constraintTop_toBottomOf="@id/etCodeInput" />
 
+    <!-- Bottom Resend Link -->
     <TextView
         android:id="@+id/tvResendCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="36dp"
+        android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
-        android:paddingVertical="8dp"
+        android:padding="8dp"
         android:text="Resend Code"
         android:textColor="#53B175"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Circular Next FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/green"
         android:contentDescription="Next"
         android:rotation="180"
-        android:src="@drawable/backarrow"
-        app:backgroundTint="@color/green"
         app:elevation="4dp"
-        app:fabSize="normal"
+        app:fabCustomSize="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="28dp"
+        app:srcCompat="@drawable/backarrow"
         app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

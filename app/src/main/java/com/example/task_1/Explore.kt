@@ -3,10 +3,15 @@ package com.example.task_1
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Explore : AppCompatActivity() {
 
@@ -15,31 +20,72 @@ class Explore : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_explore)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        val tvTitle = findViewById<TextView>(R.id.tvTitle)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+
+        // Highlight Explore Tab
+        bottomNav.selectedItemId = R.id.nav_explore
+
+        // Handle Status and Navigation Bar Insets
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
+
+            tvTitle.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = systemBars.top + 16
+            }
+
+            bottomNav.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                bottomMargin = systemBars.bottom
+            }
+
             insets
         }
 
-        val navShop = findViewById<View>(R.id.navShop)
-        navShop.setOnClickListener {
-            val intent = Intent(this@Explore, home_screen_2::class.java)
-            startActivity(intent)
-            finish()
+        // Search Bar Click
+        findViewById<View>(R.id.staticSearchBar).setOnClickListener {
+            Toast.makeText(this, "Search opened", Toast.LENGTH_SHORT).show()
         }
 
-        val navCart = findViewById<View>(R.id.navCart)
-        navCart.setOnClickListener {
-            val intent = Intent(this@Explore, My_Cart::class.java)
+        // Category Cards Navigation
+        findViewById<View>(R.id.cardBeverages).setOnClickListener {
+            val intent = Intent(this@Explore, Beverages::class.java)
             startActivity(intent)
-            finish()
         }
 
-        val navFavourite = findViewById<View>(R.id.navFavourite)
-        navFavourite.setOnClickListener {
-            val intent = Intent(this@Explore, Favourites::class.java)
-            startActivity(intent)
-            finish()
+        val dummyCategoryClick = View.OnClickListener { v ->
+            Toast.makeText(this, "Category clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        findViewById<View>(R.id.cardFruits).setOnClickListener(dummyCategoryClick)
+        findViewById<View>(R.id.cardOil).setOnClickListener(dummyCategoryClick)
+        findViewById<View>(R.id.cardMeat).setOnClickListener(dummyCategoryClick)
+        findViewById<View>(R.id.cardBakery).setOnClickListener(dummyCategoryClick)
+        findViewById<View>(R.id.cardDairy).setOnClickListener(dummyCategoryClick)
+
+        // Bottom Navigation Transitions
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_explore -> true
+                R.id.nav_shop -> {
+                    startActivity(Intent(this@Explore, home_screen_2::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_cart -> {
+                    startActivity(Intent(this@Explore, My_Cart::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_favourite -> {
+                    startActivity(Intent(this@Explore, Favourites::class.java))
+                    finish()
+                    true
+                }
+                R.id.nav_account -> {
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

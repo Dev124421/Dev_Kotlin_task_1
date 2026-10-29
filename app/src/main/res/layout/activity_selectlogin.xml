@@ -13,6 +13,8 @@
         android:id="@+id/bgTop"
         android:layout_width="0dp"
         android:layout_height="220dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
         android:src="@drawable/background_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +25,11 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
+        android:contentDescription="Back"
+        android:focusable="true"
         android:padding="12dp"
         android:src="@drawable/backarrow"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +39,7 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +58,8 @@
                 android:layout_height="160dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="Location Illustration"
                 android:src="@drawable/location" />
 
             <TextView
@@ -61,7 +69,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="24dp"
                 android:text="Select Your Location"
-                android:textColor="@color/black"
+                android:textColor="#181725"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -73,24 +81,27 @@
                 android:gravity="center"
                 android:paddingHorizontal="16dp"
                 android:text="Switch on your location to stay in tune with what’s happening in your area"
-                android:textColor="@color/grey"
+                android:textColor="#7C7C7C"
                 android:textSize="15sp" />
 
+            <!-- Zone Selection Section -->
             <TextView
                 android:id="@+id/tvZoneLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Your Zone"
-                android:textColor="@color/grey"
+                android:textColor="#7C7C7C"
                 android:textSize="16sp" />
 
             <LinearLayout
                 android:id="@+id/rowZone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
+                android:background="?attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingVertical="8dp">
@@ -101,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Banasree"
-                    android:textColor="@color/black"
+                    android:textColor="#181725"
                     android:textSize="18sp" />
 
                 <ImageView
@@ -116,23 +127,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/grey" />
+                android:background="#E2E2E2" />
 
+            <!-- Area Selection Section -->
             <TextView
                 android:id="@+id/tvAreaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Your Area"
-                android:textColor="@color/grey"
+                android:textColor="#7C7C7C"
                 android:textSize="16sp" />
 
             <LinearLayout
                 android:id="@+id/rowArea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
+                android:background="?attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingVertical="8dp">
@@ -143,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Types of your area"
-                    android:textColor="@color/grey"
+                    android:textColor="#7C7C7C"
                     android:textSize="18sp" />
 
                 <ImageView
@@ -158,20 +172,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/grey" />
+                android:background="#E2E2E2" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
+    <!-- Responsive full-width button with standard side margins -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSubmit"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="@color/green"
         android:text="Submit"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"

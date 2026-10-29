@@ -9,34 +9,41 @@
     android:background="@color/white"
     tools:context=".Number">
 
+    <!-- Top Background Decoration (extends behind status bar) -->
     <ImageView
-        android:id="@+id/Top"
-        android:layout_width="match_parent"
+        android:id="@+id/ivTopBackground"
+        android:layout_width="0dp"
         android:layout_height="220dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
         android:src="@drawable/background_3"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Back Button -->
     <ImageView
         android:id="@+id/btnBack"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
+        android:contentDescription="Back"
         android:focusable="true"
-        android:padding="14dp"
+        android:padding="12dp"
         android:src="@drawable/backarrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Screen Title -->
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:text="Enter your mobile number"
         android:textColor="#181725"
@@ -46,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnBack" />
 
+    <!-- Input Label -->
     <TextView
         android:id="@+id/tvLabel"
         android:layout_width="wrap_content"
@@ -58,6 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
+    <!-- Phone Number Input Row -->
     <LinearLayout
         android:id="@+id/phoneDisplayRow"
         android:layout_width="0dp"
@@ -73,43 +82,64 @@
 
         <ImageView
             android:id="@+id/ivFlag"
-            android:layout_width="34dp"
-            android:layout_height="24dp"
-            android:src="@drawable/bangladesh_flag"
-            android:contentDescription="Flag" />
+            android:layout_width="32dp"
+            android:layout_height="22dp"
+            android:contentDescription="Country Flag"
+            android:src="@drawable/bangladesh_flag" />
 
         <TextView
-            android:id="@+id/tvPhoneNumber"
+            android:id="@+id/tvCountryCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:text="+880 |"
+            android:layout_marginStart="12dp"
+            android:text="+880"
             android:textColor="#181725"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="1XXXXXXXXX"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:textColor="#181725"
+            android:textColorHint="#B1B1B1"
             android:textSize="18sp" />
 
     </LinearLayout>
 
+    <!-- Underline Divider -->
     <View
         android:id="@+id/dividerLine"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
+        android:background="#E2E2E2"
         app:layout_constraintEnd_toEndOf="@id/phoneDisplayRow"
         app:layout_constraintStart_toStartOf="@id/phoneDisplayRow"
         app:layout_constraintTop_toBottomOf="@id/phoneDisplayRow" />
 
-    <Button
+    <!-- Next Action Button (Floating Action Button style) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nextbtn"
-        android:layout_width="57dp"
-        android:layout_height="67dp"
-        android:layout_marginLeft="322dp"
-        android:layout_marginBottom="30.3dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/green"
-        android:text=">"
-        android:textSize="26dp"
-        android:clickable="true"/>
-
+        android:contentDescription="Proceed"
+        app:elevation="4dp"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="28dp"
+        app:srcCompat="@drawable/backarrow"
+        app:tint="@color/white"
+        android:rotation="180" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

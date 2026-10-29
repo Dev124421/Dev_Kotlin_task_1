@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Favorurite"
+        android:text="Favourite"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -49,9 +49,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Item 1: Sprite -->
             <LinearLayout
+                android:id="@+id/itemSprite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="24dp"
@@ -60,6 +65,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="60dp"
+                    android:contentDescription="Sprite"
                     android:scaleType="fitCenter"
                     android:src="@drawable/sprite" />
 
@@ -99,6 +105,7 @@
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow"
                     app:tint="@color/black" />
@@ -110,9 +117,14 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="#E2E2E2" />
 
+            <!-- Item 2: Diet Coke -->
             <LinearLayout
+                android:id="@+id/itemDietCoke"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="24dp"
@@ -121,6 +133,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="60dp"
+                    android:contentDescription="Diet Coke"
                     android:scaleType="fitCenter"
                     android:src="@drawable/diet_coke" />
 
@@ -160,6 +173,7 @@
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow"
                     app:tint="@color/black" />
@@ -171,9 +185,14 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="#E2E2E2" />
 
+            <!-- Item 3: Apple & Grape Juice -->
             <LinearLayout
+                android:id="@+id/itemJuice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="24dp"
@@ -182,6 +201,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="60dp"
+                    android:contentDescription="Apple and Grape Juice"
                     android:scaleType="fitCenter"
                     android:src="@drawable/juice" />
 
@@ -221,6 +241,7 @@
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow"
                     app:tint="@color/black" />
@@ -232,9 +253,14 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="#E2E2E2" />
 
+            <!-- Item 4: Coca Cola -->
             <LinearLayout
+                android:id="@+id/itemCocaCola"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="24dp"
@@ -243,6 +269,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="60dp"
+                    android:contentDescription="Coca Cola"
                     android:scaleType="fitCenter"
                     android:src="@drawable/coca_cola" />
 
@@ -282,6 +309,7 @@
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow"
                     app:tint="@color/black" />
@@ -293,9 +321,14 @@
                 android:layout_marginHorizontal="24dp"
                 android:background="#E2E2E2" />
 
+            <!-- Item 5: Pepsi -->
             <LinearLayout
+                android:id="@+id/itemPepsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="24dp"
@@ -304,6 +337,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="60dp"
+                    android:contentDescription="Pepsi"
                     android:scaleType="fitCenter"
                     android:src="@drawable/pepsi" />
 
@@ -343,6 +377,7 @@
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow"
                     app:tint="@color/black" />
@@ -351,160 +386,38 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
+    <!-- Add All Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/addAllBtn"
-        android:layout_width="364sp"
-        android:layout_height="67sp"
-        android:clickable="true"
-        android:text="Add All To Cart"
-        android:backgroundTint="@color/green"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/green"
+        android:text="Add All To Cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Material Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
+        app:elevation="8dp"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:id="@+id/navShop"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/shop"
-                app:tint="#181725" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Shop"
-                android:textColor="#181725"
-                android:textSize="11sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navExplore"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/explore"
-                app:tint="#181725" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Explore"
-                android:textColor="#181725"
-                android:textSize="11sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navCart"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/cart"
-                app:tint="#181725" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Cart"
-                android:textColor="#181725"
-                android:textSize="11sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navFavourite"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/fav"
-                app:tint="#53B175" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Favourite"
-                android:textColor="#53B175"
-                android:textSize="11sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navAccount"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/account"
-                app:tint="#181725" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Account"
-                android:textColor="#181725"
-                android:textSize="11sp" />
-        </LinearLayout>
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

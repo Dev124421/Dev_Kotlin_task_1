@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,7 +10,9 @@
     android:orientation="vertical"
     tools:context=".Beverages">
 
+    <!-- Top Action Bar -->
     <LinearLayout
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -47,13 +50,16 @@
             android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:contentDescription="Filter"
             android:focusable="true"
             android:padding="10dp"
             android:src="@drawable/filter"
             app:tint="#181725" />
     </LinearLayout>
 
+    <!-- Scrollable Products Grid -->
     <ScrollView
+        android:id="@+id/scrollViewBeverages"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -68,23 +74,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Row 1: Diet Coke & Sprite -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/cardDietCoke"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="7dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_product_card"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
+                        android:contentDescription="Diet Coke"
                         android:scaleType="fitCenter"
                         android:src="@drawable/diet_coke" />
 
@@ -122,9 +133,13 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:id="@+id/btnAddDietCoke"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/bg_add_button"
+                            android:clickable="true"
+                            android:contentDescription="Add to cart"
+                            android:focusable="true"
                             android:padding="11dp"
                             android:src="@drawable/ic_plus"
                             app:tint="#FFFFFF" />
@@ -132,17 +147,21 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardSprite"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="7dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_product_card"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
+                        android:contentDescription="Sprite"
                         android:scaleType="fitCenter"
                         android:src="@drawable/sprite" />
 
@@ -180,9 +199,13 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:id="@+id/btnAddSprite"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/bg_add_button"
+                            android:clickable="true"
+                            android:contentDescription="Add to cart"
+                            android:focusable="true"
                             android:padding="11dp"
                             android:src="@drawable/ic_plus"
                             app:tint="#FFFFFF" />
@@ -190,6 +213,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- Row 2: Apple & Grape Juice + Orange Juice -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
@@ -197,17 +221,21 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/cardJuice"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="7dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_product_card"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
+                        android:contentDescription="Apple and Grape Juice"
                         android:scaleType="fitCenter"
                         android:src="@drawable/juice" />
 
@@ -247,9 +275,13 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:id="@+id/btnAddJuice"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/bg_add_button"
+                            android:clickable="true"
+                            android:contentDescription="Add to cart"
+                            android:focusable="true"
                             android:padding="11dp"
                             android:src="@drawable/ic_plus"
                             app:tint="#FFFFFF" />
@@ -257,17 +289,21 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardOrangeJuice"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="7dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_product_card"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
+                        android:contentDescription="Orange Juice"
                         android:scaleType="fitCenter"
                         android:src="@drawable/orange_juice" />
 
@@ -275,7 +311,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Orenge Juice"
+                        android:text="Orange Juice"
                         android:textColor="#181725"
                         android:textSize="14sp"
                         android:textStyle="bold" />
@@ -305,9 +341,13 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:id="@+id/btnAddOrangeJuice"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/bg_add_button"
+                            android:clickable="true"
+                            android:contentDescription="Add to cart"
+                            android:focusable="true"
                             android:padding="11dp"
                             android:src="@drawable/ic_plus"
                             app:tint="#FFFFFF" />
@@ -315,6 +355,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- Row 3: Coca Cola & Pepsi -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
@@ -322,17 +363,21 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/cardCocaCola"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="7dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_product_card"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
+                        android:contentDescription="Coca Cola"
                         android:scaleType="fitCenter"
                         android:src="@drawable/coca_cola" />
 
@@ -370,9 +415,13 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:id="@+id/btnAddCocaCola"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/bg_add_button"
+                            android:clickable="true"
+                            android:contentDescription="Add to cart"
+                            android:focusable="true"
                             android:padding="11dp"
                             android:src="@drawable/ic_plus"
                             app:tint="#FFFFFF" />
@@ -380,17 +429,21 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardPepsi"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="7dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_product_card"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
+                        android:contentDescription="Pepsi"
                         android:scaleType="fitCenter"
                         android:src="@drawable/pepsi" />
 
@@ -428,9 +481,13 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:id="@+id/btnAddPepsi"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/bg_add_button"
+                            android:clickable="true"
+                            android:contentDescription="Add to cart"
+                            android:focusable="true"
                             android:padding="11dp"
                             android:src="@drawable/ic_plus"
                             app:tint="#FFFFFF" />
@@ -440,5 +497,17 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- Material Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="8dp"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
 
 </LinearLayout>

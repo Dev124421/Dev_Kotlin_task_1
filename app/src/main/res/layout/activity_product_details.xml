@@ -9,12 +9,15 @@
     android:background="@color/white"
     tools:context=".Product_details">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:fillViewport="true"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/btnAddToBasket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,57 +25,64 @@
             android:layout_height="wrap_content"
             android:paddingBottom="24dp">
 
+            <!-- Top Curved Backdrop (Bleeds under status bar) -->
             <ImageView
                 android:id="@+id/bgProduct"
                 android:layout_width="0dp"
                 android:layout_height="340dp"
+                android:contentDescription="@null"
                 android:scaleType="fitXY"
                 android:src="@drawable/product_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- Back Button -->
             <ImageView
                 android:id="@+id/btnBack"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
+                android:contentDescription="Back"
                 android:focusable="true"
                 android:padding="14dp"
                 android:src="@drawable/backarrow"
-                android:contentDescription="Back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- Share Button -->
             <ImageView
                 android:id="@+id/btnShare"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="12dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
+                android:contentDescription="Share"
                 android:focusable="true"
                 android:padding="14dp"
                 android:src="@drawable/share_product"
-                android:contentDescription="Share"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- Product Image -->
             <ImageView
                 android:id="@+id/ivProduct"
                 android:layout_width="260dp"
                 android:layout_height="180dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="Product Image"
                 android:scaleType="fitCenter"
                 android:src="@drawable/product_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btnBack" />
 
+            <!-- Carousel Indicator Dots -->
             <TextView
                 android:id="@+id/tvIndicators"
                 android:layout_width="wrap_content"
@@ -86,6 +96,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ivProduct" />
 
+            <!-- Product Title -->
             <TextView
                 android:id="@+id/tvProductName"
                 android:layout_width="0dp"
@@ -101,16 +112,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bgProduct" />
 
+            <!-- Favorite Button -->
             <ImageView
                 android:id="@+id/ivFavourite"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="20dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="Add to favorites"
+                android:focusable="true"
+                android:padding="6dp"
                 android:src="@drawable/product_heart"
                 app:layout_constraintBottom_toBottomOf="@id/tvProductName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tvProductName" />
 
+            <!-- Unit Info -->
             <TextView
                 android:id="@+id/tvProductUnit"
                 android:layout_width="wrap_content"
@@ -123,19 +141,68 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvProductName" />
 
+            <!-- Quantity Selector Controls -->
+            <LinearLayout
+                android:id="@+id/layoutQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProductUnit">
+
+                <TextView
+                    android:id="@+id/btnMinus"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="—"
+                    android:textColor="#B3B3B3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#181725"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnPlus"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="#53B175"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!-- Price -->
             <TextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="24dp"
                 android:text="$4.99"
                 android:textColor="#181725"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/layoutQuantity"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvProductUnit" />
+                app:layout_constraintTop_toTopOf="@id/layoutQuantity" />
 
+            <!-- Divider 1 -->
             <View
                 android:id="@+id/divider1"
                 android:layout_width="0dp"
@@ -146,8 +213,9 @@
                 android:background="#E2E2E2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+                app:layout_constraintTop_toBottomOf="@id/layoutQuantity" />
 
+            <!-- Product Detail Row (Collapsible) -->
             <LinearLayout
                 android:id="@+id/rowProductDetail"
                 android:layout_width="0dp"
@@ -155,8 +223,12 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:paddingVertical="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider1">
@@ -171,8 +243,10 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/ivArrowDetail"
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="270"
                     android:src="@drawable/backarrow" />
             </LinearLayout>
@@ -192,6 +266,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rowProductDetail" />
 
+            <!-- Divider 2 -->
             <View
                 android:id="@+id/divider2"
                 android:layout_width="0dp"
@@ -204,6 +279,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvProductDesc" />
 
+            <!-- Nutritions Row -->
             <LinearLayout
                 android:id="@+id/rowNutritions"
                 android:layout_width="0dp"
@@ -211,8 +287,12 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:paddingVertical="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider2">
@@ -226,13 +306,26 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_search_bar"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"
+                    android:text="100gr"
+                    android:textColor="#7C7C7C"
+                    android:textSize="10sp" />
+
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow" />
             </LinearLayout>
 
+            <!-- Divider 3 -->
             <View
                 android:id="@+id/divider3"
                 android:layout_width="0dp"
@@ -245,6 +338,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rowNutritions" />
 
+            <!-- Review Row -->
             <LinearLayout
                 android:id="@+id/rowReview"
                 android:layout_width="0dp"
@@ -252,8 +346,12 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:paddingVertical="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider3">
@@ -271,18 +369,21 @@
                     android:layout_width="92dp"
                     android:layout_height="16dp"
                     android:layout_marginEnd="16dp"
+                    android:contentDescription="Rating 5 Stars"
                     android:src="@drawable/review_stars" />
 
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="14dp"
+                    android:contentDescription="@null"
                     android:rotation="180"
                     android:src="@drawable/backarrow" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
+    <!-- Add To Basket Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAddToBasket"
         android:layout_width="0dp"
